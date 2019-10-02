@@ -1,0 +1,16 @@
+PODS:
+  - StringeeChat (0.1.0)
+
+DEPENDENCIES:
+  - StringeeChat (from `../`)
+
+EXTERNAL SOURCES:
+  StringeeChat:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  StringeeChat: 0a0e6dbbc97ba2f341569dfddc84aed9be5e7c47
+
+PODFILE CHECKSUM: 3bd60c4f6cceb81be7d6fd8f91be4bd27817e168
+
+COCOAPODS: 1.7.2

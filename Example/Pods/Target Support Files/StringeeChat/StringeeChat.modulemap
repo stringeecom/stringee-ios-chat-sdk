@@ -1,0 +1,6 @@
+framework module StringeeChat {
+  umbrella header "StringeeChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

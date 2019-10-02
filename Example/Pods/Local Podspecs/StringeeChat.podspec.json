@@ -1,0 +1,22 @@
+{
+  "name": "StringeeChat",
+  "version": "0.1.0",
+  "summary": "A short description of StringeeChat.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/info@stringee.com/StringeeChat",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "info@stringee.com": "info@stringee.com"
+  },
+  "source": {
+    "git": "https://github.com/info@stringee.com/StringeeChat.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "StringeeChat/Classes/**/*"
+}
