@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "StringeeConversation.h"
+#import "SXChatProfile.h"
+#import "SXCustomerInfo.h"
 
 @class StringeeClient;
 @class StringeeCall;
@@ -151,5 +153,21 @@ extern NSString * const StringeeClientNewMessageSeqKey;
 - (void)clearData;
 
 - (void)disconnect;
+
+- (void)getChatProfileWithKey:(NSString *)key completion:(void(^)(BOOL status, int code, NSString *message, SXChatProfile *chatProfile))completion;
+
+- (void)generateTokenForCustomerWithKey:(NSString *)key username:(NSString *)username email:(NSString *)email completion:(void(^)(BOOL status, int code, NSString *message, NSString *token))completion;
+
+- (void)createLiveChatConversationWithQueueId:(NSString *)queueId completion:(void(^)(BOOL status, int code, NSString *message, StringeeConversation *conversation))completion;
+
+- (void)createTicketForMissChatWithKey:(NSString *)key userId:(NSString *)userId username:(NSString *)username email:(NSString *)email note:(NSString *)note completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
+- (void)getCustomerInfo:(void(^)(BOOL status, int code, NSString *message, SXCustomerInfo *customerInfo))completion;
+
+- (void)updateUserInfo:(SXCustomerInfo *)customerInfo username:(NSString *)username email:(NSString *)email avatar:(NSString *)avatar completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
+- (void)sendChatTranscriptTo:(NSString *)email convId:(NSString *)convId domain:(NSString *)domain completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
+- (void)endChatSupportWithConvId:(NSString *)convId completion:(void(^)(BOOL status, int code, NSString *message))completion;
 
 @end
