@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StringeeChat'
-  s.version          = '0.1.9'
+  s.version          = '0.2.0'
   s.summary          = 'Developed by Stringee'
 
   s.description      = <<-DESC
@@ -24,5 +24,6 @@ The Stringee platform, developed by Stringee, makes it easy to embed high-qualit
   s.libraries = 'icucore', 'stdc++'
 
   s.vendored_frameworks = 'StringeeChat/Classes/**/Stringee.framework'
-  
+  s.dependency "GoogleWebRTC", '1.1.27828'
+
 end

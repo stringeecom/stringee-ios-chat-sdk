@@ -78,6 +78,8 @@ typedef NS_ENUM(NSInteger, CallDTMF) {
 @interface StringeeCall : NSObject
 
 @property (strong, nonatomic, readonly) NSString *callId;
+@property (assign, nonatomic, readonly) int serial;
+@property (assign, nonatomic, readonly) SignalingState signalingState;
 @property (strong, nonatomic, readonly) NSString *from;
 @property (strong, nonatomic, readonly) NSString *to;
 @property (strong, nonatomic, readonly) NSString *fromAlias;

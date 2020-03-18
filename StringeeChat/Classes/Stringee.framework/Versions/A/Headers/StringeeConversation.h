@@ -173,4 +173,12 @@
 
 - (void)updateWithName:(NSString *)name strAvatarUrl:(NSString *)strAvatarUrl completionHandler:(void(^)(BOOL status, int code, NSString * message))completionHandler;
 
+- (void)getMessageWithId:(NSString *)msgId completion:(void(^)(BOOL status, int code, NSString *message, StringeeMessage *msg))completion;
+
+- (void)pinMessage:(StringeeMessage *)msg isPin:(BOOL)isPin completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
+- (void)editMessage:(StringeeMessage *)msg newContent:(NSString *)newContent completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
+- (void)revokeMessage:(StringeeMessage *)msg completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
 @end
