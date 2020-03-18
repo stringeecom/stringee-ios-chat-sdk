@@ -13,7 +13,7 @@ The Stringee platform, developed by Stringee, makes it easy to embed high-qualit
   s.author           = { 'Stringee' => 'info@stringee.com' }
   s.source           = { :git => 'https://github.com/stringeecom/stringee-ios-chat-sdk.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-ObjC'}
 
