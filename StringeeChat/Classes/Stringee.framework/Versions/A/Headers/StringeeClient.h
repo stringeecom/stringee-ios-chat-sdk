@@ -89,6 +89,8 @@ extern NSString * const StringeeClientNewMessageSeqKey;
 
 - (instancetype)initWithConnectionDelegate:(id<StringeeConnectionDelegate>)delegate;
 
+- (void)setHost:(NSString *)host port:(int)port;
+
 - (void)connectWithAccessToken:(NSString *)accessToken;
 
 - (void)registerPushForDeviceToken:(NSString *)deviceToken isProduction:(BOOL)isProduction isVoip:(BOOL)isVoip completionHandler:(void(^)(BOOL status, int code, NSString *message))completionHandler;
