@@ -27,6 +27,7 @@
 #import "StringeeStickerMessage.h"
 #import "StringeeProgress.h"
 #import "StringeeObjectChange.h"
+#import "StringeeChatRequest.h"
 
 #import "SXQueue.h"
 #import "SXCustomerInfo.h"

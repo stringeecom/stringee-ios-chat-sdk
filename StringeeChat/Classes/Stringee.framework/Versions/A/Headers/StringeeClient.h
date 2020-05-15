@@ -10,6 +10,7 @@
 #import "StringeeConversation.h"
 #import "SXChatProfile.h"
 #import "SXCustomerInfo.h"
+#import "StringeeChatRequest.h"
 
 @class StringeeClient;
 @class StringeeCall;
@@ -64,7 +65,17 @@ extern NSString * const StringeeClientNewMessageSeqKey;
 
 - (void)didFailWithError:(StringeeClient *)stringeeClient code:(int)code message:(NSString *)message;
 
+@optional
+
 - (void)didReceiveCustomMessage:(StringeeClient *)stringeeClient message:(NSDictionary *)message fromUserId:(NSString *)userId;
+
+- (void)didReceiveChatRequest:(StringeeClient *)stringeeClient request:(StringeeChatRequest *)request;
+
+- (void)didEndChatRequest:(StringeeClient *)stringeeClient request:(StringeeChatRequest *)request;
+
+- (void)didEndChatSupport:(StringeeClient *)stringeeClient infos:(NSDictionary *)infos;
+
+- (void)didReceiveMessageFromTopic:(StringeeClient *)stringeeClient message:(NSDictionary *)message fromUserId:(NSString *)userId;
 
 @end
 

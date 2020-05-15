@@ -88,6 +88,8 @@
  */
 @property (assign, nonatomic, readonly) long long created;
 
+@property (assign, nonatomic) StringeeChannel channelType;
+
 /**
  Gửi tin nhắn
  @param message một thể hiện của StringeeMessage(StringeeTextMessage, StringeeLocationMessage, StringeeContactMessage...).
@@ -120,7 +122,7 @@
  @param count số lượng message cần lấy.
  CompletionHandler trả về kết quả.
  */
-- (void)getLastMessagesWithCount:(NSUInteger)count completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
+- (void)getLastMessagesWithCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
 
 /**
  Lấy về thông tin của các message được gửi đến conversations trước một message nào đó. Ex: sử dụng khi người dùng thực hiện load more.
@@ -128,7 +130,7 @@
  @param count số lượng message cần lấy.
  CompletionHandler trả về kết quả.
  */
-- (void)getMessagesBefore:(NSUInteger)index withCount:(NSUInteger)count completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
+- (void)getMessagesBefore:(NSUInteger)index withCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
 
 /**
  Lấy về thông tin của các message được gửi đến conversations sau một message nào đó. Ex: thực hiện khi load các message mới hơn.
@@ -136,7 +138,7 @@
  @param count số lượng message cần lấy.
  CompletionHandler trả về kết quả.
  */
-- (void)getMessagesAfter:(NSUInteger)index withCount:(NSUInteger)count completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
+- (void)getMessagesAfter:(NSUInteger)index withCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
 
 /**
  Đánh dấu tất cả message của conversation như đã đọc.
@@ -179,6 +181,8 @@
 
 - (void)editMessage:(StringeeMessage *)msg newContent:(NSString *)newContent completion:(void(^)(BOOL status, int code, NSString *message))completion;
 
-- (void)revokeMessage:(StringeeMessage *)msg completion:(void(^)(BOOL status, int code, NSString *message))completion;
+- (void)revokeMessage:(StringeeMessage *)msg deleted:(BOOL)deleted completion:(void(^)(BOOL status, int code, NSString *message))completion;
+
+- (void)setRole:(StringeeRole)role forPart:(StringeeIdentity *)part completion:(void(^)(BOOL status, int code, NSString *message))completion;
 
 @end

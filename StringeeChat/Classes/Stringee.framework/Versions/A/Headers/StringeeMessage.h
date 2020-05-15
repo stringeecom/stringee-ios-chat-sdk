@@ -12,6 +12,13 @@
 @class StringeeConversation;
 @class StringeeClient;
 
+typedef NS_ENUM(NSInteger, StringeeChannel) {
+    StringeeChannelNormal       = 0,
+    StringeeChannelLiveChat     = 1,
+    StringeeChannelFacebook     = 2,
+    StringeeChannelZalo         = 3,
+};
+
 typedef NS_ENUM(NSInteger, StringeeMessageType) {
     // Message kiểu text
     StringeeMessageTypeText             = 1,
@@ -133,6 +140,10 @@ typedef NS_ENUM(NSInteger, StringeeContentTransferStatus) {
  UserId của người gửi tin nhắn.
  */
 @property (strong, nonatomic, readonly) NSString *sender;
+
+@property(assign, nonatomic, readonly) BOOL deleted;
+
+@property (assign, nonatomic, readonly) StringeeChannel channelType;
 
 /**
  Trạng thái của tin nhắn.
