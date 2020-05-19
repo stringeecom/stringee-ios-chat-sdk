@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, StringeeRole) {
+    StringeeRoleMember,
+    StringeeRoleAdmin
+};
+
 /**
  Đại diện một user trong hệ thống với các thông tin định danh người dùng, thông tin của người dùng trong conversation.
  */
@@ -37,5 +42,8 @@
  Sequence của tin nhắn cuối cùng mà user đã xem trong conversation, trường này sử dụng khi đọc thông của Participants trong conversation.
  */
 @property (assign, nonatomic, readonly) NSUInteger lastMsgSeqSeen;
+
+@property (assign, nonatomic, readonly) StringeeRole role;
+
 
 @end
