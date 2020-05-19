@@ -95,7 +95,7 @@ extern NSString * const StringeeClientNewMessageSeqKey;
 @property (weak, nonatomic) id<StringeeConnectionDelegate> connectionDelegate;
 @property (weak, nonatomic) id<StringeeIncomingCallDelegate> incomingCallDelegate;
 @property (assign, nonatomic, readonly) BOOL hasConnected;
-@property (strong, nonatomic, readonly) NSString *userId;
+@property (copy, nonatomic, readonly) NSString *userId;
 @property (strong, nonatomic, readonly) NSString *projectId;
 
 - (instancetype)initWithConnectionDelegate:(id<StringeeConnectionDelegate>)delegate;
@@ -129,9 +129,10 @@ extern NSString * const StringeeClientNewMessageSeqKey;
 /**
  Lấy thông tin các conversation được lưu ở local database.
  @param count số lượng conversation muốn lấy.
+ @param userId lấy các conversation thuộc về user này.
  Trả về conversations hoặc nil nếu thất bại.
  */
-- (void)getLocalConversationsWithCount:(NSUInteger)count completionHandler:(void(^)(BOOL status, int code, NSString *message, NSArray<StringeeConversation *> *conversations))completionHandler;
+- (void)getLocalConversationsWithCount:(NSUInteger)count userId:(NSString *)userId completionHandler:(void(^)(BOOL status, int code, NSString *message, NSArray<StringeeConversation *> *conversations))completionHandler;
 
 /**
  Lấy thông tin các conversation mà được update mới nhất trên server(Ex: có tin nhắn đến, thêm thành viên...). Trong đó:

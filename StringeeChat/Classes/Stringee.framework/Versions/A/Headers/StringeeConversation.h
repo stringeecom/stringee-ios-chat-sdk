@@ -24,6 +24,11 @@
 @property (strong, nonatomic, readonly) NSString *identifier;
 
 /**
+ Cùng một thiết bị có thể có nhiều user connect đến Stringee server để tạo các cuộc trò chuyện. Trường này để định danh user mà conversation này thuộc về.
+ */
+@property (copy, nonatomic, readonly) NSString *userId;
+
+/**
  Tên của conversation.
  */
 @property (strong, nonatomic, readonly) NSString *name;
