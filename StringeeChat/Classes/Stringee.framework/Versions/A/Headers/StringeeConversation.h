@@ -44,6 +44,11 @@
 @property (strong, nonatomic, readonly) StringeeMessage *lastMsg;
 
 /**
+ Id của tin nhắn được pin
+ */
+@property (strong, nonatomic, readonly) NSString *pinMsgId;
+
+/**
  Các thành viên của conversation này, có dạng 1 set các StringeeIdentity.
  */
 @property (strong, nonatomic, readonly) NSSet *participants;
