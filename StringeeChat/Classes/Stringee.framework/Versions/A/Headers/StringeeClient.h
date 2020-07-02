@@ -11,6 +11,7 @@
 #import "SXChatProfile.h"
 #import "SXCustomerInfo.h"
 #import "StringeeChatRequest.h"
+#import "StringeeServerAddress.h"
 
 @class StringeeClient;
 @class StringeeCall;
@@ -100,7 +101,9 @@ extern NSString * const StringeeClientNewMessageSeqKey;
 
 - (instancetype)initWithConnectionDelegate:(id<StringeeConnectionDelegate>)delegate;
 
-- (void)setHost:(NSString *)host port:(int)port;
+- (instancetype)initWithConnectionDelegate:(id<StringeeConnectionDelegate>)delegate serverAddress:(NSArray<StringeeServerAddress *> *)serverAddresses;
+
+- (instancetype)initWithServerAddress:(NSArray<StringeeServerAddress *> *)serverAddresses;
 
 - (void)connectWithAccessToken:(NSString *)accessToken;
 
