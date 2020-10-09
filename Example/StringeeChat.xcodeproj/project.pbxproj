@@ -61,12 +61,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		69413968B0612AF4D590D8C8 /* Pods-StringeeChat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringeeChat_Tests.release.xcconfig"; path = "Target Support Files/Pods-StringeeChat_Tests/Pods-StringeeChat_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7836F8C846E2EFF1D5296293 /* StringeeChat.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = StringeeChat.podspec; path = ../StringeeChat.podspec; sourceTree = "<group>"; };
+		7836F8C846E2EFF1D5296293 /* StringeeChat.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StringeeChat.podspec; path = ../StringeeChat.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD4B37BF462A4B9CD37BC419 /* Pods_StringeeChat_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StringeeChat_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE33AB8227C54EC193F5030C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CE33AB8227C54EC193F5030C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F4893AFC24928C5936C5B2F9 /* Pods-StringeeChat_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringeeChat_Example.debug.xcconfig"; path = "Target Support Files/Pods-StringeeChat_Example/Pods-StringeeChat_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FA6A604576F5D24A79E8049D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FA6A604576F5D24A79E8049D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				129930409012B8440B278B1A /* Pods-StringeeChat_Tests.debug.xcconfig */,
 				69413968B0612AF4D590D8C8 /* Pods-StringeeChat_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,6 +494,7 @@
 			baseConfigurationReference = F4893AFC24928C5936C5B2F9 /* Pods-StringeeChat_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StringeeChat/StringeeChat-Prefix.pch";
 				INFOPLIST_FILE = "StringeeChat/StringeeChat-Info.plist";
@@ -510,6 +511,7 @@
 			baseConfigurationReference = 37E7B4B9B4ECC51589B04286 /* Pods-StringeeChat_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StringeeChat/StringeeChat-Prefix.pch";
 				INFOPLIST_FILE = "StringeeChat/StringeeChat-Info.plist";
