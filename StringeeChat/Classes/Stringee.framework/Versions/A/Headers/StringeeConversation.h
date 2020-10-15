@@ -134,6 +134,8 @@
  */
 - (void)getLastMessagesWithCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
 
+- (void)getLastMessagesWithCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent loadHistory:(BOOL)loadHistory completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
+
 /**
  Lấy về thông tin của các message được gửi đến conversations trước một message nào đó. Ex: sử dụng khi người dùng thực hiện load more.
  @param index sequence của message mốc, sử dụng trường seq của Message.
@@ -142,6 +144,8 @@
  */
 - (void)getMessagesBefore:(NSUInteger)index withCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
 
+- (void)getMessagesBefore:(NSUInteger)index withCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent loadHistory:(BOOL)loadHistory completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
+
 /**
  Lấy về thông tin của các message được gửi đến conversations sau một message nào đó. Ex: thực hiện khi load các message mới hơn.
  @param index sequence của message mốc, sử dụng trường seq của Message.
@@ -149,6 +153,8 @@
  CompletionHandler trả về kết quả.
  */
 - (void)getMessagesAfter:(NSUInteger)index withCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
+
+- (void)getMessagesAfter:(NSUInteger)index withCount:(NSUInteger)count loadDeletedMessage:(BOOL)loadDeletedMessage loadDeletedMessageContent:(BOOL)loadDeletedMessageContent loadHistory:(BOOL)loadHistory completionHandler:(void(^)(BOOL status, int code, NSString * message, NSArray<StringeeMessage *> *messages))completionHandler;
 
 /**
  Đánh dấu tất cả message của conversation như đã đọc.
